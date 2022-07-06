@@ -66,7 +66,7 @@ namespace DatastructureDemo130Batch
                 //    break;
                 case 8:
                     string paragraph = "To be or not to be";
-                    CountNumbOfOccurence(paragraph);
+                    CountNumbOfOccurence(paragraph);//going to CountNumbOdoccuranec method
                     break;
                 default:
                     break;
@@ -76,21 +76,21 @@ namespace DatastructureDemo130Batch
 
         public static void CountNumbOfOccurence(string paragraph)
         {
-            MyMapNode<string, int> hashTabe = new MyMapNode<string, int>(6);
+            MyMapNode<string, int> hashTabe = new MyMapNode<string, int>(6);//creating hashtable of size 6
 
-            string[] words = paragraph.Split(' ');
+            string[] words = paragraph.Split(' ');//splitiong string with space
 
-            foreach (string word in words)
+            foreach (string word in words)//travese each word
             {
-                if (hashTabe.Exists(word.ToLower()))
+                if (hashTabe.Exists(word.ToLower()))//if that wrod inside that hashtable word exist convert to lower
                     hashTabe.Add(word.ToLower(), hashTabe.Get(word.ToLower()) + 1);
                 else
-                    hashTabe.Add(word.ToLower(), 1); //to,1 
+                    hashTabe.Add(word.ToLower(), 1); //to,1 //now added to,1 to linked list
             }
             Console.WriteLine("Displaying after add operation");
-            hashTabe.Display();
+            hashTabe.Display();//display
             string s = "or";
-            hashTabe.Remove(s);
+            hashTabe.Remove(s);//here we are removing for the word or
             Console.WriteLine("After removed an item {0}", s);
             hashTabe.Display();
         }
