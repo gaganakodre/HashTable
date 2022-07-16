@@ -34,7 +34,7 @@ namespace DatastructureDemo130Batch
 
         public V Get(K key)//here for the repaeted word we are getting the key
         {
-            var linkedList = GetArrayPositionAndLinkedList(key);
+            var linkedList = GetArrayPositionAndLinkedList(key);//here we are taking the linkedlist variable of type var to store the key
             foreach (KeyValue<K, V> item in linkedList)
             {
                 if (item.Key.Equals(key))
